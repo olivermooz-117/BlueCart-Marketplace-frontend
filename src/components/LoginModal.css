@@ -1,0 +1,83 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 43, 43, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal-card {
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  width: 360px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+.modal-card h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.modal-card label {
+  display: block;
+  font-size: 13px;
+  margin: 10px 0 4px;
+  color: var(--color-text-muted);
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  border: 1px solid #EDE6D6;
+  font-size: 14px;
+}
+
+.modal-submit {
+  width: 100%;
+  margin-top: 1.25rem;
+  background: var(--color-accent);
+  color: #5A3300;
+  border: none;
+  border-radius: var(--radius-control);
+  padding: 10px;
+  font-weight: 500;
+}
+
+.modal-switch {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+}
+
+.modal-switch button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .modal-backdrop {
+    align-items: flex-end;
+  }
+  .modal-card {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+}

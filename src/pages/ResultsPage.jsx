@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 import { mockResults } from "../data/mockProducts";
 import "./ResultsPage.css";
 
-export default function ResultsPage({ query }) {
+export default function ResultsPage({ query, onSelectProduct }) {
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   return (
@@ -20,7 +20,13 @@ export default function ResultsPage({ query }) {
         <FilterSidebar className="sidebar-desktop" />
         <div className="results-list">
           {mockResults.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div
+              key={product.id}
+              onClick={() => onSelectProduct(product.id)}
+              style={{ cursor: "pointer" }}
+            >
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>
